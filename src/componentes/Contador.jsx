@@ -31,6 +31,7 @@ export default class Contador extends Component{
         <Boton simbolo='+' accion={()=> this.sumar()}/>
         <Boton simbolo='x3' accion={()=> this.multiplicar()}/>
         <Boton simbolo='%2' accion={()=> this.dividir()}/>
+        <Boton simbolo='%2' accion={()=> this.dividir()}/>
         </div>
 
       </div>
