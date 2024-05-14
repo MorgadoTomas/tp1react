@@ -24,7 +24,7 @@ export default class App extends Component{
         guardar={(nombre) => this.guardar(nombre)}
         />
         <div className='ListaContadores'>
-          { this.state}
+          { this.state.contadores.map((cont, index) => <Contador key={index}> {cont}</Contador>)}
 
 
         </div>
