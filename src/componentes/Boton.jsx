@@ -7,7 +7,6 @@ constructor (props) {
 render (){
     return (
         <span className="Boton" onClick={()=> this.props.accion()}>
-
             {this.props.simbolo}
         </span>
     )

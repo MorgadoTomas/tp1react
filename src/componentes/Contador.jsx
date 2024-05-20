@@ -8,6 +8,10 @@ export default class Contador extends Component{
     this.state = { valor:0}
   }
 
+  componentDidMount(){
+    this.setState ({valor: this.state.valor})
+  }
+  
   restar(){
    this.setState ({valor: this.state.valor-1})
   }
@@ -20,21 +24,22 @@ export default class Contador extends Component{
   dividir(){
     this.setState ({valor: this.state.valor/2})
     }
-  borrarcontador(){
+
+
     
-  }
+  
     
   render (){
     return (
       <div className='Contador'>
         <span className='Titulo'>{this.props.children} </span>
-        <span className='Valor'>{this.state.valor} </span>
+        <span className='Valor'>{this.state.valor}</span>
         <div className='Botonera'>
         <Boton simbolo='-' accion={()=> this.restar()}/>
         <Boton simbolo='+' accion={()=> this.sumar()}/>
         <Boton simbolo='x3' accion={()=> this.multiplicar()}/>
         <Boton simbolo='%2' accion={()=> this.dividir()}/>
-        <Boton simbolo='X' accion={()=> this.dividir()}/>
+        <Boton simbolo='X' accion={()=> this.props.borrarcontador()}/>
         </div>
 
       </div>
